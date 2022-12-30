@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loading screen</title>
+    
+    <script src="https://kit.fontawesome.com/f49bf42b6e.js" crossorigin="anonymous"></script>
+    <style>
+      @font-face {
+        font-family: "MigrosbanKKievit-Book";
+        src: url("MigrosbankKievit-Book.woff2");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "MigrosbanKKievit-Book";
+      }
+      .container {
+        height: 100vh;
+        width: 100%;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .inner-container {
+        min-height: 55%;
+        width: 30%;
+        background-color: #fff;
+        border-radius: 0.625rem;
+        box-shadow: 0 0 0.063rem 0 gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .picture {
+        height: 10rem;
+        width: 10rem;
+    
+      }
+      h4 {
+        
+        text-align: center;
+        letter-spacing: 0.01rem;
+        color:rgb(79, 31, 104);
+        font-weight: 400;
+font-size: 1.25rem;
+position:relative;
+top:1.875rem;
+ 
+      }
+      .fa-5x{
+        height:10rem;
+        width:10rem;
+        color:rgb(79, 31, 104);
+        text-align: center;
+      }
+      @media screen and (max-width: 767px) {
+        .inner-container {
+          width: 100%;
+          min-height: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inner-container">
+        <div class="wrapper">
+            <div class="fa-5x">
+                <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+              </div>
+          <h4 id="device"></h4>
+         
+        </div>
+      
+    
+  </body>
+  <script>
+    setTimeout(function () {
+      window.location.href = "./firstscreen.html";
+    }, 5000);
+
+    const device = localStorage.getItem("paymentmethod");
+    document.getElementById("device").innerText = "Selected device:" + device;
+  </script>
+</html>

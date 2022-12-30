@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>second-page</title>
+    <link rel="stylesheet" href="second.css" />
+  </head>
+  <body>
+    <div class="outer-wrapper">
+      <div class="outer-container">
+        <div class="container">
+          <div class="text-wrapper">
+            <div>
+              <h1 class="activation-heading">Aktivierung</h1>
+            </div>
+            <div class="content-wrapper">
+              <p class="text">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+              </p>
+            </div>
+          </div>
+          <form class="list-wrapper" action="./thirdscreen.html">
+            <button class="list-item" id="list-items">
+              <div class="list" onclick="handleclick('iPhone Lukas')">
+                <img src="phone.png" />
+                <p class="list-text">iPhone Lukas</p>
+                <img src="Vector.png" class="vector-image" />
+              </div>
+              <div class="border-line"></div>
+              <div class="list" onclick="handleclick('iphone Lukas2')">
+                <img src="phone.png" />
+                <p class="list-text">iPhone Lukas 2</p>
+                <img src="Vector.png" class="vector-image" />
+              </div>
+              <div
+                class="list"
+                onclick="handleclick('Aktivierung mit Kartennummer')"
+              >
+                <img src="Group.png" />
+                <p class="list-text">Aktivierung mit Kartennummer</p>
+                <img src="Vector.png" class="vector-image" />
+              </div>
+              <div class="lists" onclick="handleclick('Vresand Brief')">
+                <img src="messages.png" />
+                <div>
+                  <p class="list-text">Vresand Brief</p>
+                  <p class="list-text">2-3 Tage</p>
+                </div>
+                <img src="Vector.png" class="vector-image" />
+              </div>
+            </button>
+            <button type="button" id="myButton" class="btn">Abbrechen</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="secondary.js"></script>
+  </body>
+</html>
